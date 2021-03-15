@@ -1,2 +1,2 @@
-##WebApp using Spring MVC
+## WebApp using Spring MVC
 
