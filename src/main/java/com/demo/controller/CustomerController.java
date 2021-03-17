@@ -46,8 +46,8 @@ public class CustomerController {
 
     @RequestMapping(method = RequestMethod.POST)
     public String saveOrUpdate(Customer customer){
-        Customer newCustomer = customerService.saveOrUpdate(customer);
-        return "redirect:customer/show/" + newCustomer.getId();
+        customerService.saveOrUpdate(customer);
+        return "redirect:customer/list";
     }
 
     @RequestMapping("/delete/{id}")
