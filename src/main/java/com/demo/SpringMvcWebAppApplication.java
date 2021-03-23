@@ -10,9 +10,6 @@ public class SpringMvcWebAppApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SpringMvcWebAppApplication.class, args);
 		System.out.println("----------------"+ctx.getBeanDefinitionCount()+"----------------");
-//		for(String s : ctx.getBeanDefinitionNames()) {
-//			System.out.println(s);
-//		}
 	}
 
 }
