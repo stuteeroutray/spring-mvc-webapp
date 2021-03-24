@@ -1,18 +1,17 @@
 package com.demo.services;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import com.demo.domain.DomainObject;
 import com.demo.domain.Product;
 
 @Service
+@Profile("map")
 public class ProductServiceImpl extends AbstractMapService implements ProductService{
 
     public ProductServiceImpl() {
@@ -76,7 +75,7 @@ public class ProductServiceImpl extends AbstractMapService implements ProductSer
 
         Product product5 = new Product();
         product5.setId(5);
-        product5.setDescription("Product 2");
+        product5.setDescription("Product 5");
         product5.setPrice(new BigDecimal("25.99"));
         product5.setImageUrl("http://example.com/product5");
 
