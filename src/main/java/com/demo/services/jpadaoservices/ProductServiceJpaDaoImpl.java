@@ -1,8 +1,9 @@
-package com.demo.services;
+package com.demo.services.jpadaoservices;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import com.demo.domain.Product;
+import com.demo.services.ProductService;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
