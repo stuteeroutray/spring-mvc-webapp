@@ -55,10 +55,9 @@ public class CustomerServiceJpaDaoImpl implements CustomerService{
             domainObject.getUser().setEncryptedPassword(
                     encryptionService.encryptString(domainObject.getUser().getPassword()));
         }
-
         Customer savedCustomer = em.merge(domainObject);
         em.getTransaction().commit();
-
+        System.out.println("...................................................................................3");
         return savedCustomer;
 	}
 

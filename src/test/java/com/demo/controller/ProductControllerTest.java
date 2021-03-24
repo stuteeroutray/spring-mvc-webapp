@@ -2,26 +2,23 @@ package com.demo.controller;
 
 import com.demo.domain.Product;
 import com.demo.services.ProductService;
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
-import org.junit.jupiter.api.TestInstance.Lifecycle;
+
+import org.junit.Before;
+import org.junit.Test;
 import org.mockito.*;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.hamcrest.Matchers.*;
 import static org.mockito.Mockito.*;
+import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@TestInstance(Lifecycle.PER_CLASS)
+
 public class ProductControllerTest {
 
     @Mock //Mockito Mock object
@@ -32,7 +29,7 @@ public class ProductControllerTest {
 
     private MockMvc mockMvc;
 
-    @BeforeAll
+    @Before
     public void setup(){
         MockitoAnnotations.initMocks(this); //initilizes controller and mocks
 

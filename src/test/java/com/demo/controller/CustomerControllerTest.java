@@ -3,11 +3,7 @@ package com.demo.controller;
 import com.demo.domain.Customer;
 import com.demo.services.CustomerService;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
-import org.junit.jupiter.api.TestInstance.Lifecycle;
+import org.junit.*;
 import org.mockito.*;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -17,12 +13,12 @@ import java.util.List;
 
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.beans.HasPropertyWithValue.hasProperty;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@TestInstance(Lifecycle.PER_CLASS)
 public class CustomerControllerTest {
 
     @Mock
@@ -33,7 +29,7 @@ public class CustomerControllerTest {
 
     private MockMvc mockMvc;
 
-    @BeforeAll
+    @Before
     public void setup(){
         MockitoAnnotations.initMocks(this);
         mockMvc = MockMvcBuilders.standaloneSetup(customerController).build();

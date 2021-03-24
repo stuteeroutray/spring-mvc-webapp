@@ -7,9 +7,8 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class SpringMvcWebAppApplication {
 
-	public static void main(String[] args) {
-		ApplicationContext ctx = SpringApplication.run(SpringMvcWebAppApplication.class, args);
-		System.out.println("----------------"+ctx.getBeanDefinitionCount()+"----------------");
-	}
-
+    public static void main(String[] args) {
+        ApplicationContext ctx = SpringApplication.run(SpringMvcWebAppApplication.class, args);
+        System.out.println("----------------"+ctx.getBeanDefinitionCount()+"----------------");
+    }
 }
