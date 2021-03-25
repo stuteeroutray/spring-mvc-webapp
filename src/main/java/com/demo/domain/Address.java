@@ -1,14 +1,19 @@
 package com.demo.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
 public class Address {
-
+	@Column(name = "addressLine1", insertable=false, updatable=false)
     private String addressLine1;
-    private String addressLine2;
-    private String city;
+	@Column(name = "addressLine2", insertable=false, updatable=false)
+	private String addressLine2;
+	@Column(name = "city", insertable=false, updatable=false)
+	private String city;
+	@Column(name = "state", insertable=false, updatable=false)
     private String state;
+	@Column(name = "zipCode", insertable=false, updatable=false)
     private String zipCode;
 
     public String getAddressLine1() {
